@@ -1,16 +1,8 @@
 <!-- start footer -->
 <footer>
   <div>
-    <div id="marginBottom" class="displaySpaceAr">
-      <a href="https://twitter.com/brunoharlein" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-      <a href="https://www.linkedin.com/in/harlein-bruno-76012635/" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
-      <a href="loginForm.php"><i class="fas fa-unlock-alt fa-2x"></i></a>
-    </div>
-  </div>
-  <div class="desktopOnly">
-    <div class="secondFooter displaySpaceAr">
-      <a href="https://500px.com/brunoharlein" target="_blank"><i class="fab fa-500px fa-2x"></i></a>
-      <a href="https://www.facebook.com/brunoharleinphotographe/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+    <div id="marginBottom" class="">
+      <h2 id="colorTxtAdminFooter" class="textCenter">ESPACE ADMIN</h2>
     </div>
   </div>
 </footer>

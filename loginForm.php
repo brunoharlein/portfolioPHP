@@ -19,5 +19,5 @@
 </form>
 
 <?php
-  include "template/footer.php";
+  include "template/adminFooter.php";
 ?>

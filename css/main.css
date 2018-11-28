@@ -217,6 +217,9 @@ footer {
 footer i {
   color: #33AF84;
 }
+#colorTxtAdminFooter {
+  color:#33AF84;
+}
 /************************ buton */
 .button {
   display: inline-block;

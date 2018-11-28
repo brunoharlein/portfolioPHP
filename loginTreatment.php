@@ -18,7 +18,6 @@ if(!empty($_POST)) {
   foreach ($users as $user) {
     if($user["mail"] === $_POST["mailLogin"] && $user["password"] === $_POST["passwordLogin"]) {
       // var_dump($user);
-      // start session
       session_start();
       $_SESSION["user"] = $user;
       header("Location: managementPortfolio.php");
