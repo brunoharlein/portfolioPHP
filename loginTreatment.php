@@ -1,22 +1,34 @@
 <?php
+// connexion bdd
 require "modele/bdd.php";
 
-
+//On vérifie si le formulaire a été rempli
 if(!empty($_POST)) {
   //On nettoie les entrées du formulaire
-  $_POST = clearForm($_POST);
-  //On récupère l'utilisateur stocké sur le site
-  $user = getUser($_POST, $db);
-  //On vérifie si la db a trouvé un utilisateur
-  if(!empty($user) && password_verify($_POST["passwordLogin"], $user["password"])) {
-    initializeUserSession($user);
-    header("Location: products.php");
-    //On met un exit pour arrêter l'execution du script, autrement la redirection n'aura pas le temps de se faire
-    exit;
+  foreach ($_POST as $key => $value) {
+    $_POST[$key] = htmlspecialchars($value);
   }
-  else {
-    header("Location: index.php?message=7");
-    exit;
+  // var_dump($_POST);
+  //requete la BDD
+  $request = $bdd->query("SELECT * FROM user");
+  // extraction des données
+  $users = $request->fetchall (PDO::FETCH_ASSOC);
+  // var_dump($users);
+
+  foreach ($users as $user) {
+    if($user["mail"] === $_POST["mailLogin"] && $user["password"] === $_POST["passwordLogin"]) {
+      // var_dump($user);
+      // start session
+      session_start();
+      $_SESSION["user"] = $user;
+      header("Location: managementPortfolio.php");
+      exit;
+    }
+    else {
+      header("Location: index.php");
+      exit;
+    }
+
   }
 }
 
