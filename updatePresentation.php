@@ -3,8 +3,7 @@ require "service/checkForm.php";
 restrictToAdmin();
 include "template/headNav.php";
  ?>
-
- <form action="updatePresentationTreatment.php" method="post">
+ <form action="updatePresentationTreatment.php" method="post" name="updateBio">
    <div class="form-group">
      <label for="exampleInputEmail1">modification titre</label>
      <input type="text" class="form-control" name="title" placeholder="title update">
@@ -15,9 +14,6 @@ include "template/headNav.php";
    </div>
    <button type="submit" class="btn btn-primary">Envoyer</button>
  </form>
-
-
-
  <?php
  include "template/adminfooter.php";
   ?>

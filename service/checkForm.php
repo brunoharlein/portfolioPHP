@@ -32,15 +32,15 @@ function restrictToAdmin() {
   }
 }
 
-// //Fonction pour modifier la bio
-// function updateProduct($product, $bdd) {
-//   $query = $bdd->prepare("UPDATE biography SET title = :title, txtBio = :txtBio");
-//   $updBio = $query->execute([
-//     "name" => $product["title"] ,
-//     "price" => $product["txtBio"]
-//   ]);
-//   return $result;
-// }
+//Fonction pour modifier la bio
+function updateBiography($bdd) {
+  $query = $bdd->prepare("UPDATE biography SET title = :title, txtBio = :txtBio WHERE id = 2");
+  $updBio = $query->execute([
+    "title" => $_POST["title"],
+    "txtBio" => $_POST["txtBio"]
+  ]);
+  return $updBio;
+}
 
 
 //Fonction qui recupere la bio
@@ -48,6 +48,18 @@ function getBio($bdd) {
   $query = $bdd->query("SELECT * FROM biography");
   $writeBio = $query->fetch(PDO::FETCH_ASSOC);
   return $writeBio;
+}
+
+// function du logOut
+function logOut() {
+  //On récupère la session courante
+  session_start();
+  //On la vide de ses variables
+  session_unset();
+  //on la détruit
+  session_destroy();
+  //On redirige l'utilisateur sur la page de login
+  header("Location: index.php");
 }
 
 
