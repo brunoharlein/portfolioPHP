@@ -18,12 +18,12 @@ include "template/headNav.php";
      </div>
      <div class="col-3">
        <article class="card" style="width: 18rem;">
-         <div class="card-body">
-           <h5 class="card-title">Card title</h5>
-           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-           <a href="#" class="card-link">Card link</a>
-           <a href="#" class="card-link">Another link</a>
+         <div class="card-body textCenter">
+           <h5 class="card-title">PROJET</h5>
+           <h6 class="card-subtitle mb-2 text-muted">Modifications</h6>
+           <p class="card-text">lien de redirection pour modifir un article et ou en ajouter un.</p>
+           <a href="updateProjets.php" class="card-link">modifier la page</a><br>
+           <a href="addProjet.php" class="card-link">creation d'un article</a>
          </div>
        </article>
      </div>
