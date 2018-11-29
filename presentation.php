@@ -2,13 +2,16 @@
 <?php
   include "template/headNav.php";
   include "template/header.php";
+  require "modele/bdd.php";
+  require "service/checkForm.php";
+  $writeBio = getBio($bdd);
 ?>
 
   <!-- start main -->
   <main>
     <section id="marginBottom" class="borderHeaderP">
       <h3 id="marginBottom">PRÉSENTATION</h3>
-      <p>Compétences, passions, ma vie, c'est ici !</p>
+      <p><?php echo $writeBio["title"]; ?></p>
     </section>
     <div id="marginTop" class="DFJCS">
       <div id="marginBottom" class="imgProfilePresentation">
@@ -17,10 +20,7 @@
         </div>
         <div class="widthPPresentation">
           <!-- <h4 id="marginBottom">DIVERS</h4> -->
-          <p>Bruno Harlein 39 ans, développeur web junior et papa de deux enfants.<br>
-            Je suis également photographe depuis plus de 5 ans. J'enseigne aussi les arts martiaux depuis plus de 20 ans. Je viens de faire 2 formations Développeur Web au sein des bureaux de l'ADEP à Roubaix.<br>
-            La Premiére formation à durée 3,5 mois. Nous avons mis en oeuvre les bases du HTML-CSS, PHP-MYSQL, JAVA-SCRIPT, BOOTSTRAP ainsi que WORDPRESS.<br>
-            Durant la seconde formation qui elle dure 7 mois plus 4 à 6 mois de stage en entreprise. Nous avons approfondi les mêmes languages ainsi que l'utilisation de Symfony et d'Angular.</p>
+          <p><?php echo $writeBio["txtBio"]; ?></p>
         </div>
       </div>
     </div>

@@ -32,6 +32,26 @@ function restrictToAdmin() {
   }
 }
 
+// //Fonction pour modifier la bio
+// function updateProduct($product, $bdd) {
+//   $query = $bdd->prepare("UPDATE biography SET title = :title, txtBio = :txtBio");
+//   $updBio = $query->execute([
+//     "name" => $product["title"] ,
+//     "price" => $product["txtBio"]
+//   ]);
+//   return $result;
+// }
+
+
+//Fonction qui recupere la bio
+function getBio($bdd) {
+  $query = $bdd->query("SELECT * FROM biography");
+  $writeBio = $query->fetch(PDO::FETCH_ASSOC);
+  return $writeBio;
+}
+
+
+
 
 
 
