@@ -10,11 +10,11 @@ restrictToAdmin();
      <p>HTML/CSS</p>
    </article>
    <article id="marginBottom" class="textCenter">
-     <a href="phpjs.php"><i class="fab fa-php fa-5x"></i></a>
+     <a href="phpjsDisplay.php"><i class="fab fa-php fa-5x"></i></a>
      <p>PHP/JS</p>
    </article>
    <article id="marginBottom" class="textCenter">
-     <a href="wp.php"><i class="fab fa-wordpress-simple fa-5x"></i></a>
+     <a href="wpDisplay.php"><i class="fab fa-wordpress-simple fa-5x"></i></a>
      <p>WordPress</p>
    </article>
  </main>
