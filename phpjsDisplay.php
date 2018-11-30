@@ -28,6 +28,10 @@
        <div class="DFJCS">
          <a href="<?php echo $result["link"] ?>" target="_blank"><button class="button" style="vertical-align:middle"><span><?php echo $result["btnName"] ?></span></button></a>
        </div>
+       <div class="DFJCS">
+         <a href="<?php echo 'updateProjectForm.php?id=' . $result['id']; ?>" <button type="button" class="btn btn-outline-danger">MODIFIER</button></a>
+        </div>
+
      </article>
      <?php
       }
