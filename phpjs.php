@@ -2,30 +2,39 @@
 <?php
   include "template/headNav.php";
   include "template/header.php";
+  require "modele/bdd.php";
+  require "modele/addUpdateProjects.php";
+  $projectsPhpJs = getProjectPhpJs($bdd);
 ?>
-
   <main class="mainAuto">
     <section id="marginBottom" class="borderHeaderP">
       <h3 id="marginBottom">Mes projets</h3>
       <p>Ici nous parlerons PHP et Java-Script, nous voici dans le monde du echo et du console.log :</p>
     </section>
-    <div class="">
+    <div class="flexArticleHtmlCss">
+      <?php
+        //On boucle pour afficher tous les projets
+        foreach ($projectsPhpJs as $key => $result) {
+      ?>
       <article class="articleProject">
         <div class="textCenter">
-          <h3 id="marginBottom">Terre de Geek</h3>
+          <h3 id="marginBottom"><?php echo $result["title"] ?></h3>
         </div>
         <figure>
-          <img id="marginBottom" class="zoom imgBorder" src="img/terre.png" alt="terre de geek picture">
+          <img id="marginBottom" class="zoom imgBorder" src="img/ocea.png" alt="ocea picture">
         </figure>
         <div id="marginBottom" class="textCenter">
-          <p>Toute petite touche de PHP pour ce site. Utilisation du include pour le template.</p>
+          <p><?php echo $result["comment"] ?></p>
         </div>
         <div class="DFJCS">
-          <a href="https://github.com/brunoharlein/terredegeek" target="_blank"><button class="button" style="vertical-align:middle"><span>TERRE DE GEEK</span></button></a>
+          <a href="<?php echo $result["link"] ?>" target="_blank"><button class="button" style="vertical-align:middle"><span><?php echo $result["btnName"] ?></span></button></a>
         </div>
       </article>
-  </div>
-  </main>
+      <?php
+       }
+       ?>
+     </div>
+     </main>  <!-- end main -->
   <!-- end main -->
 
   <!-- include footer  -->
