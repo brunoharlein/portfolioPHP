@@ -6,7 +6,7 @@ include "template/headNav.php";
 $id = htmlspecialchars($_GET["id"]);
 // var_dump($id);
  ?>
- <form action="updateProjectTreatment.php" method="post" name="updateProjetHtmlCss">
+ <form action="updateProjectTreatmentPhpJs.php" method="post" name="updateProjetHtmlCss">
    <input type="hidden" name="id" <?php echo "value='" . $id . "'" ?>>
    <div class="form-group">
      <label for="exampleInputEmail1">modification projet</label>

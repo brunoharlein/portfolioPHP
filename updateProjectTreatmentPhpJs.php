@@ -6,7 +6,7 @@ require "modele/addUpdateProjects.php";
 
 
 //Fonction pour modifier les valeurs d'un produit en base de données
-  $query = $bdd->prepare("UPDATE projectHtmlCss SET title = :title, comment = :comment, link = :link, btnName = :btnName  WHERE id = :id");
+  $query = $bdd->prepare("UPDATE projectPhpJs SET title = :title, comment = :comment, link = :link, btnName = :btnName  WHERE id = :id");
   $updProjectHtmlCss = $query->execute([
     "id" => $_POST["id"],
     "title" => $_POST["title"],
