@@ -3,7 +3,7 @@ include "template/headNav.php";
 require "service/checkForm.php";
 restrictToAdmin();
  ?>
-
+ <h3 class="textCenter">Modification des projets</h3>
  <main class="widthMain displayWrap">
    <article id="marginBottom" class="textCenter">
      <a href="htmlcssDisplay.php"><i class="fab fa-html5 fa-5x"></i></a>
