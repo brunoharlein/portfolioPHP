@@ -25,9 +25,9 @@
       </div>
     </div>
     <section class="textCenter">
-      <h3 id="marginBottom">MES COMPÉTENCES</h3>
+      <h3 class="mb-4 mt-4">MES COMPÉTENCES</h3>
       <div class="">
-        <p class="displayFlexLogoCompetence" id="marginBottom" class="box"><i class="fab fa-html5 fa-5x"></i><i class="fab fa-css3-alt fa-5x"></i><i class="fab fa-php fa-5x"></i><i class="fab fa-js-square fa-5x"></i><i class="fab fa-wordpress-simple fa-5x"></i><i class="fab fa-github fa-5x"></i></p>
+        <p class="displayFlexLogoCompetence mb-5" class="box"><i class="fab fa-html5 fa-4x"></i><i class="fab fa-css3-alt fa-4x"></i><i class="fab fa-php fa-4x"></i><i class="fab fa-js-square fa-4x"></i><i class="fab fa-wordpress-simple fa-4x"></i><i class="fab fa-github fa-4x"></i><i class="fab fa-angular fa-4x"></i></p>
       </div>
       <hr class="desktopNone">
     </section>
@@ -35,8 +35,9 @@
       <section class="textCenter">
         <h3 id="marginBottom">MAIS AUSSI</h3>
         <div class="displaySpaceAr">
+          <img class="imgPresentation" src="img/symfony.png" alt="logo symfony">
           <img class="imgPresentation" src="img/boot.svg" alt="logo bootstrap">
-          <img class="imgPresentation" src="img/sql.png" alt="logo sql">
+          <img class="imgPresentationSql" src="img/mysql.svg" alt="logo sql">
         </div>
         <hr class="">
       </section>
